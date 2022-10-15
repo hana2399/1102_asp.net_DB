@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="netdbBModelStoreContainer" CdmEntityContainer="PagedEntities">
+    <EntitySetMapping Name="TablePageds1091711">
+      <EntityTypeMapping TypeName="netdbBModel.TablePageds1091711">
+        <MappingFragment StoreEntitySet="TablePageds1091711">
+          <ScalarProperty Name="書籍IBSN碼" ColumnName="書籍IBSN碼" />
+          <ScalarProperty Name="書名" ColumnName="書名" />
+          <ScalarProperty Name="作者" ColumnName="作者" />
+          <ScalarProperty Name="書籍分類" ColumnName="書籍分類" />
+          <ScalarProperty Name="出版日期" ColumnName="出版日期" />
+          <ScalarProperty Name="上架日期" ColumnName="上架日期" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

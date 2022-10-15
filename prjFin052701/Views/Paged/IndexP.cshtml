@@ -1,0 +1,67 @@
+﻿@using PagedList
+@using PagedList.Mvc
+
+@model IPagedList<prjFin052701.Models.TablePageds1091711>
+
+@{
+    ViewBag.Title = "*書籍總覽*";
+}
+
+<link href="~/Content/PagedList.css" rel="stylesheet" />
+<h3>書籍總覽</h3>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().書籍IBSN碼)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().書名)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().作者)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().書籍分類)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().出版日期)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().上架日期)
+        </th>
+
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.書籍IBSN碼)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.書名)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.作者)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.書籍分類)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.出版日期)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.上架日期)
+    </td>
+    
+
+</tr>
+    }
+
+</table>
+
+@Html.PagedListPager(Model, page => Url.Action("IndexP", new { page }))

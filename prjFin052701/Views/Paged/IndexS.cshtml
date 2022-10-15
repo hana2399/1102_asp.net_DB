@@ -1,0 +1,13 @@
+﻿
+<h3>書籍查詢</h3>
+@using (Html.BeginForm("IndexS", "Paged", FormMethod.Get))
+{
+<p>
+    @Html.TextBox("name")
+    <input type="submit" value="查詢" />
+</p>
+    <p>
+        於網址列的localhost/Paged/後改為"ShowBookByName?keyword="+查詢書名關鍵字<br />
+        即可藉由書名查詢到書本IBSN編號、書名以及作者
+    </p>
+}

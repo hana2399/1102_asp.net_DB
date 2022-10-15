@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="netdbBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TablePageds1091711">
+    <Key>
+      <PropertyRef Name="書籍IBSN碼" />
+    </Key>
+    <Property Name="書籍IBSN碼" Type="String" MaxLength="13" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="書名" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="作者" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="書籍分類" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="出版日期" Type="DateTime" Precision="0" />
+    <Property Name="上架日期" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityContainer Name="PagedEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TablePageds1091711" EntityType="Self.TablePageds1091711" />
+  </EntityContainer>
+</Schema>

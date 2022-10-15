@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbBookModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TableBooks1091711">
+    <Key>
+      <PropertyRef Name="BOOK_IBSN" />
+    </Key>
+    <Property Name="BOOK_IBSN" Type="nvarchar" MaxLength="13" Nullable="false" />
+    <Property Name="BOOK_TITLE" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="BOOK_ATOR" Type="nvarchar" MaxLength="30" />
+    <Property Name="CLASS_ID" Type="int" Nullable="false" />
+    <Property Name="BOOK_PUB" Type="date" />
+    <Property Name="BOOK_UPDATE" Type="date" />
+  </EntityType>
+  <EntityType Name="TableClasss1091711">
+    <Key>
+      <PropertyRef Name="CLASS_ID" />
+    </Key>
+    <Property Name="CLASS_ID" Type="int" Nullable="false" />
+    <Property Name="CLASS_NAME" Type="nvarchar" MaxLength="25" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__TableBook__CLASS__2042BE37">
+    <End Role="TableClasss1091711" Type="Self.TableClasss1091711" Multiplicity="1" />
+    <End Role="TableBooks1091711" Type="Self.TableBooks1091711" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TableClasss1091711">
+        <PropertyRef Name="CLASS_ID" />
+      </Principal>
+      <Dependent Role="TableBooks1091711">
+        <PropertyRef Name="CLASS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dbBookModelStoreContainer">
+    <EntitySet Name="TableBooks1091711" EntityType="Self.TableBooks1091711" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TableClasss1091711" EntityType="Self.TableClasss1091711" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__TableBook__CLASS__2042BE37" Association="Self.FK__TableBook__CLASS__2042BE37">
+      <End Role="TableClasss1091711" EntitySet="TableClasss1091711" />
+      <End Role="TableBooks1091711" EntitySet="TableBooks1091711" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

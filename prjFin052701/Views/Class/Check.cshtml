@@ -1,0 +1,54 @@
+﻿@model prjFin052701.Models.CVMBook
+
+@{
+    ViewBag.Title = "二手書籍管理";
+}
+
+<h2>@ViewBag.CLASS_NAME</h2>
+<div class="row">
+    <div class="col-md-2">
+        @foreach (var item in Model.class01)
+        {
+            <p>@Html.ActionLink(item.CLASS_NAME, "Check", new { classId = item.CLASS_ID })</p>
+        }
+    </div>
+    <div class="col-md-9">
+        <table class="table">
+            <tr>
+                <th>ISBN</th>
+                <th>書名</th>
+                <th>作者</th>
+                <th>書本分類</th>
+                <th>出版日期</th>
+                <th>上架日期</th>
+                <th></th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model.book00)
+            {
+                <tr>
+                    <td>@item.BOOK_IBSN</td>
+                    <td>@item.BOOK_TITLE</td>
+                    <td>@item.BOOK_ATOR</td>
+                    <td>@item.TableClasss1091711.CLASS_NAME</td>
+                    <td>@item.BOOK_PUB</td>
+                    <td>@item.BOOK_UPDATE </td>
+
+                    <td>
+                        <a href="@Url.Action("Edit")?BOOK_IBSN=@item.BOOK_IBSN" class="btn btn-warning">編輯</a>                        
+                    </td>
+                    <td>
+                        <a href="@Url.Action("Delete")?BOOK_IBSN=@item.BOOK_IBSN"
+                           class="btn btn-danger"
+                           onclick="return confirm('確定要刪除編號 @item.BOOK_IBSN 書籍嗎？');">
+                            刪除
+                        </a>
+                    </td>
+   
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
