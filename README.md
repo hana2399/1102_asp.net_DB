@@ -6,8 +6,8 @@
 呈現客戶端頁面<br>
 有多種上架書籍管理功能，如分類、編輯、上架以及刪除<br>
 <br>
-登入畫面<br>
-------
+<h4>登入畫面</h4>
+
 登入畫面隨意輸入會跳出有帳號密碼各三組的提示，請選擇帳密對應登入(mary/123)/(kate/456)/(shai/789)<br>
 <img width="960" alt="01登入畫面" src="https://user-images.githubusercontent.com/105577291/195973932-b801e3bc-3adc-40eb-aa55-73d7ecdbf115.png"><br>
 登入後再點擊「商品檢視」，進入書籍總覽<br>
