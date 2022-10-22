@@ -35,5 +35,7 @@
 <img width="960" alt="0601上架書籍" src="https://user-images.githubusercontent.com/105577291/195973942-826b78d5-9679-41e2-91a7-6705f8831c8d.png">
 書籍上就後的自然科普上架頁面<br>
 <img width="960" alt="0602上架書籍" src="https://user-images.githubusercontent.com/105577291/195973944-13dcbd19-7c89-44bb-b5bd-0d75046840d5.png">
-也有刪除書籍的功能<
+也有刪除書籍的功能<br>
 <img width="960" alt="07刪除書籍" src="https://user-images.githubusercontent.com/105577291/195973949-cc63baa9-85e8-4b71-9f77-352d3e0cd70b.png">
+
+
